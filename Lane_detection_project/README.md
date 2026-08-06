@@ -24,6 +24,19 @@ An end-to-end Computer Vision & Deep Learning Perception Pipeline for Autonomous
 
 ---
 
+## 💻 Tech Stack
+
+| Category | Technologies & Tools |
+| :--- | :--- |
+| **Core Language** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) |
+| **Computer Vision** | ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white) ![SciPy](https://img.shields.io/badge/SciPy-8CCEF0?style=for-the-badge&logo=scipy&logoColor=black) |
+| **Deep Learning & Segmentation** | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white) ![Albumentations](https://img.shields.io/badge/Albumentations-2.0-blue?style=for-the-badge) ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white) |
+| **Web Dashboard & UI** | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white) |
+| **Data Analytics & Visualization** | ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge) ![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white) |
+| **Testing & Quality Assurance** | ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white) ![Unittest](https://img.shields.io/badge/Unittest-Standard-blue?style=for-the-badge) |
+
+---
+
 ## 🛠️ Installation
 
 ```bash
