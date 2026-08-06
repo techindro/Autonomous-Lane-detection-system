@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Dict, Tuple, Optional
 import time
 
-from .model import LaneDetectionModel, LaneDetectionTrainer
+from .model import LaneDetectionModel, LaneNet, LaneDetectionTrainer
 from .dataloader import create_dataloaders
 from ..config import config
 
