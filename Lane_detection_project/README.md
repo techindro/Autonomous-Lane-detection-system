@@ -24,6 +24,28 @@ An end-to-end Computer Vision & Deep Learning Perception Pipeline for Autonomous
 
 ---
 
+## ⚙️ Perception Pipeline Architecture
+
+```mermaid
+flowchart TD
+    Input[Input Video / Image Stream] --> Preprocess[Grayscale & Gaussian Blur]
+    Preprocess --> CannyEdge[Canny Edge & Thresholding]
+    Preprocess --> BirdEye[Perspective Warping - Bird's Eye View]
+    
+    CannyEdge --> Hough[Hough Line Detection]
+    BirdEye --> SlidingWindow[Histogram Peak & Sliding Window]
+    Input --> UNet[U-Net Neural Network Segmentation]
+    
+    Hough --> Telemetry[Calculate Road Curvature & Vehicle Offset]
+    SlidingWindow --> Telemetry
+    UNet --> Telemetry
+    
+    Telemetry --> Visualization[Lane Overlay & Telemetry Dashboard]
+    Visualization --> Output[Streamlit Web App / MP4 Video Output]
+```
+
+---
+
 ## 💻 Tech Stack
 
 | Category | Technologies & Tools |
