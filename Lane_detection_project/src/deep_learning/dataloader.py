@@ -7,15 +7,20 @@ from torch.utils.data import Dataset, DataLoader
 import cv2
 import numpy as np
 from pathlib import Path
-from typing import Tuple, List, Optional
-import albumentations as A
-from albumentations.pytorch import ToTensorV2
+from typing import Tuple, List, Optional, Any
+try:
+    import albumentations as A
+    from albumentations.pytorch import ToTensorV2
+    HAS_ALBUMENTATIONS = True
+except ImportError:
+    HAS_ALBUMENTATIONS = False
+    A = None
 
 class LaneDataset(Dataset):
     """Dataset class for lane detection"""
     
     def __init__(self, image_paths: List[str], mask_paths: List[str], 
-                 transform: Optional[A.Compose] = None,
+                 transform: Optional[Any] = None,
                  image_size: Tuple[int, int] = (640, 360)):
         """
         Initialize dataset
@@ -63,8 +68,10 @@ class LaneDataset(Dataset):
         return image, mask
     
     @staticmethod
-    def get_transforms(augment: bool = False) -> A.Compose:
+    def get_transforms(augment: bool = False):
         """Get data transforms"""
+        if not HAS_ALBUMENTATIONS:
+            return None
         if augment:
             # Training transforms with augmentation
             return A.Compose([
