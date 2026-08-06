@@ -35,6 +35,15 @@ python -m streamlit run app.py
 
 ## Getting Started
 
+### Prerequisites
+
+Before running this project, ensure you have the following installed:
+
+- **Python 3.9+** (Python 3.9, 3.10, 3.11, or 3.12)
+- **pip** (Python package manager)
+- **Git** (for cloning the repository)
+- **FFmpeg** (optional, for processing MP4 video files)
+
 ### 1. Installation
 
 Clone the repository and install required packages:
