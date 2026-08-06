@@ -133,7 +133,7 @@ class DeepLearningPredictor:
             'visualization': visualization
         }
     
-    def _extract_lane_lines(self, mask: np.ndarray) -> list:
+    def _extract_lane_lines(self, mask: np.ndarray) -> List[Dict[str, Any]]:
         """Extract lane lines from segmentation mask"""
         # Find contours in mask
         contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -160,7 +160,7 @@ class DeepLearningPredictor:
         
         return lane_lines
     
-    def _calculate_curvature(self, lane_lines: list, image_height: int) -> float:
+    def _calculate_curvature(self, lane_lines: List[Dict[str, Any]], image_height: int) -> float:
         """Calculate average curvature from lane lines"""
         curvatures = []
         
@@ -174,9 +174,9 @@ class DeepLearningPredictor:
             curvature = abs(vx / vy) if vy != 0 else 0
             curvatures.append(curvature)
         
-        return np.mean(curvatures) if curvatures else 0.0
+        return float(np.mean(curvatures)) if curvatures else 0.0
     
-    def _calculate_offset(self, lane_lines: list, image_width: int) -> float:
+    def _calculate_offset(self, lane_lines: List[Dict[str, Any]], image_width: int) -> float:
         """Calculate vehicle offset from center"""
         if len(lane_lines) < 2:
             return 0.0
@@ -194,7 +194,7 @@ class DeepLearningPredictor:
                 x_positions.append(x2)
         
         # Calculate lane center
-        lane_center = np.mean(x_positions)
+        lane_center = float(np.mean(x_positions))
         image_center = image_width / 2
         
         # Convert to meters
@@ -205,7 +205,7 @@ class DeepLearningPredictor:
     
     def _create_visualization(self, image: np.ndarray, 
                              mask: np.ndarray, 
-                             lane_lines: list) -> np.ndarray:
+                             lane_lines: List[Dict[str, Any]]) -> np.ndarray:
         """Create visualization of detection results"""
         # Create overlay
         overlay = image.copy()
