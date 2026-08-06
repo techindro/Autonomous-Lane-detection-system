@@ -10,6 +10,12 @@ A Python and OpenCV project for detecting road lane lines from images and video 
 - **Road Metrics**: Calculates road curvature radius and vehicle position offset from lane center.
 - **Streamlit Web Interface**: Web dashboard to test images, videos, and adjust parameters locally.
 
+## Demo Result
+
+![Lane Detection Result](output/test1_result.jpg)
+
+- **Sample Image Output**: [View Result Image](output/test1_result.jpg)
+
 ## Tech Stack
 
 - **Language**: Python 3.9+
