@@ -363,7 +363,7 @@ def main():
             train_model(args.dataset, epochs=args.epochs)
             
         elif args.mode == 'compare':
-            from src.utils.comparison import compare_methods
+            from src.utils.metrics import compare_methods
             if not args.dataset:
                 print("Error: --dataset required for comparison")
                 return
