@@ -9,8 +9,8 @@ import numpy as np
 from pathlib import Path
 from typing import Tuple, List, Optional, Any
 try:
-    import albumentations as A
-    from albumentations.pytorch import ToTensorV2
+    import albumentations as A  # type: ignore # noqa: F401
+    from albumentations.pytorch import ToTensorV2  # type: ignore # noqa: F401
     HAS_ALBUMENTATIONS = True
 except ImportError:
     HAS_ALBUMENTATIONS = False
