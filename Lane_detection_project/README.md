@@ -10,6 +10,18 @@ A Python and OpenCV project for detecting road lane lines from images and video 
 - **Road Metrics**: Calculates road curvature radius and vehicle position offset from lane center.
 - **Streamlit Web Interface**: Web dashboard to test images, videos, and adjust parameters locally.
 
+## Localhost Web Interface
+
+You can run the web dashboard locally on your computer to test lane detection interactively in your browser.
+
+1. Start the Streamlit server:
+```bash
+python -m streamlit run app.py
+```
+
+2. Open the localhost URL in your browser:
+**http://localhost:8501**
+
 ## Demo Result
 
 ![Lane Detection Result](output/test1_result.jpg)
@@ -33,15 +45,12 @@ cd Lane_detection_project/Lane_detection_project
 pip install -r requirements.txt
 ```
 
-### 2. Run the Web App
-
-Launch the local Streamlit web application:
+### 2. Run the Web App (Localhost)
 
 ```bash
 python -m streamlit run app.py
 ```
-
-Open **[http://localhost:8501](http://localhost:8501)** in your browser.
+Access at **http://localhost:8501**
 
 ### 3. Run Command Line Script
 
