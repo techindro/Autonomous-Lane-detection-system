@@ -6,7 +6,7 @@ import torch
 import torch.nn as nn
 import cv2
 import numpy as np
-from typing import Dict, Any, Optional, Tuple
+from typing import Dict, Any, Optional, Tuple, List
 from pathlib import Path
 
 from .model import LaneDetectionModel
